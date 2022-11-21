@@ -1,0 +1,41 @@
+
+<div class="container">
+  <h1>New Game</h1>
+  <div class="row">
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[0]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[1]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[2]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[3]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[4]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[5]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[6]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[7]}"%></p>
+    </div>
+    <div class="col card text-white bg-primary mb-3">
+      <p class="mx-auto"><%= "#{@letters[8]}"%></p>
+    </div>
+  </div>
+  <form  action="score" method="post" data-turbo="false">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="text" text='ask your question' name="answer">
+    <input type="submit" value="answer">
+    <input id="tags_list" name="letters" type="hidden" value="<%= @letters.join(" ") %>"/>
+    <input id="tags_list" name="start_time" type="hidden" value="<%= @start_time %>"/>
+
+  </form>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Your score</h1>
+  <p>------------</p>
+  <p>socre: <%= @hash[:score].round %></p>
+  <p>time: <%= @hash[:time]*-1 %></p>
+  <%= link_to "back to game", new_path %>
+
+</div>
